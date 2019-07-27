@@ -1,0 +1,57 @@
+body {
+  background: #6FC59B;
+
+}
+
+.todo-container {
+  background: rgba(41,33, 33, .7);
+  width: 40vw;
+  margin: 10rem auto;
+  border-radius: 15px;
+  padding: 20px 10px;
+  color: white;
+  border: 3px solid rgb(36, 110, 194);
+}
+
+.task {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: .5em;
+  margin: .5em;
+}
+
+.task button {
+  background: rgb(12, 124, 251);
+  border-radius: 5px;
+  margin: 0px 5px;
+  padding: 3px 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  float: right;
+}
+
+.header {
+  margin: .5em;
+  font-size: 2em;
+  text-align: center; 
+}
+
+.create-task input[type=text] {
+  margin: 2.5em 2em;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  border-radius: 3px;
+  background-color: rgba(#ffff, .9);
+  border: none;
+  border-bottom: 3px solid rgb(12, 124, 251) transparent;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.create-task input[type=text]:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(#000, .1);
+  border-bottom: 3px rgb(12, 124, 251) solid ;
+}
