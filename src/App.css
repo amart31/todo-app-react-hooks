@@ -1,11 +1,23 @@
 body {
-  background: #6FC59B;
+  background: #A5CBEF;
 
+}
+
+.nav {
+  background-color: #144370;
+  padding: 15px;
+
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
 }
 
 .todo-container {
   background: rgba(41,33, 33, .7);
-  width: 40vw;
+  width: 80vw;
+  max-width: 600px;
   margin: 10rem auto;
   border-radius: 15px;
   padding: 20px 10px;

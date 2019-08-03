@@ -1,16 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+import {  
+    Container,
+    Navbar,
+    NavbarBrand } from 'reactstrap';
+
+function NavBar() {
+    return (
+        <Container>
+
+            <Navbar className="nav">
+            <NavbarBrand href="/">To-Do App</NavbarBrand>
+            </Navbar>
+        </Container>
+    );
+}
+
 function Task({ task, index, completeTask, removeTask }) {
     return (
-        <div
+        <Container
             className="task"
             style={{textDecoration: task.completed ? "line-through" : " "}}
             >
             {task.title}
             <button style={{background: "red" }} onClick={() => removeTask(index)}>X</button>
             <button onClick={() => completeTask(index)}>Complete</button>
-            </div>
+            </Container>
     );
 }
 
@@ -68,9 +84,11 @@ function Todo() {
     };
 
     return (
-        <div className="todo-container">
-        <div className="header">Pending tasks ({tasksRemaining})</div>
-        <div className="tasks">
+        <Container>
+        <NavBar />
+        <Container className="todo-container">
+        <Container className="header">Pending tasks ({tasksRemaining})</Container>
+        <Container className="tasks">
             {tasks.map((task, index) => (
                 <Task
                     task={task}
@@ -80,11 +98,12 @@ function Todo() {
                     key={index}
                     />
             ))}
-        </div>
-                <div className="create-task" >
+        </Container>
+                <Container className="create-task" >
                     <CreateTask addTask={addTask} />
-                </div>
-        </div>
+                </Container>
+        </Container>
+        </Container>
     );
 }
 
